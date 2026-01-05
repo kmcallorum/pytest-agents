@@ -1,6 +1,9 @@
 # SuperClaude
 
 [![CI](https://github.com/kmcallorum/claudelife/actions/workflows/ci.yml/badge.svg)](https://github.com/kmcallorum/claudelife/actions/workflows/ci.yml)
+[![Release](https://github.com/kmcallorum/claudelife/actions/workflows/release.yml/badge.svg)](https://github.com/kmcallorum/claudelife/actions/workflows/release.yml)
+[![GitHub Release](https://img.shields.io/github/v/release/kmcallorum/claudelife)](https://github.com/kmcallorum/claudelife/releases)
+[![PyPI](https://img.shields.io/pypi/v/superclaude)](https://pypi.org/project/superclaude/)
 [![CodeQL](https://github.com/kmcallorum/claudelife/actions/workflows/codeql.yml/badge.svg)](https://github.com/kmcallorum/claudelife/actions/workflows/codeql.yml)
 [![Security Policy](https://img.shields.io/badge/security-policy-blue.svg)](SECURITY.md)
 [![Python Version](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
@@ -24,11 +27,27 @@ A pytest plugin framework with AI agent capabilities for project management, res
 
 ### Installation
 
+**From PyPI (Recommended):**
 ```bash
-# Install Python package
+pip install superclaude
+```
+
+**From Docker:**
+```bash
+docker pull ghcr.io/kmcallorum/claudelife:latest
+docker run ghcr.io/kmcallorum/claudelife:latest superclaude verify
+```
+
+**From Source:**
+```bash
+# Clone repository
+git clone https://github.com/kmcallorum/claudelife.git
+cd claudelife
+
+# Install with uv
 make install
 
-# Or manually with uv
+# Or manually
 uv pip install -e ".[dev]"
 ```
 
@@ -167,6 +186,7 @@ See [SECURITY.md](SECURITY.md) for complete security policy and disclosure guide
 
 See `docs/` directory for detailed documentation:
 
+- [Release Process](docs/RELEASE.md) - Automated releases and versioning
 - [Security Setup Guide](docs/SECURITY_SETUP.md) - Activate security scanning
 - [Developer Guide](docs/developer-guide/README.md)
 - [Architecture Overview](docs/developer-guide/architecture.md)
